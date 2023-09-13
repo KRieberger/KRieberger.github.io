@@ -1,0 +1,44 @@
+body {
+	width: 70%;
+	max-width: 900px;
+	border: 2px solid #000;
+	margin: 70px auto;
+	padding: 1rem;
+}
+
+nav {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	border-width: 2px;
+	border-color: #999;
+	width: 100%;
+}
+
+.centre-text {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 5px auto;
+}
+
+td {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+#table {
+	padding-left: 1vw;
+}
+
+#robit {
+	height: 2em;
+}
+
+form {
+	text-align: center;
+}
