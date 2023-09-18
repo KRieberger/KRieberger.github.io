@@ -39,6 +39,12 @@ td {
 	height: 2em;
 }
 
+#dam {
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+}
+
 form {
 	text-align: center;
 }
