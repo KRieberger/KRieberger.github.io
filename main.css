@@ -1,3 +1,5 @@
+/* Target by Element */
+
 body {
 	width: 70%;
 	max-width: 900px;
@@ -17,19 +19,27 @@ hr {
 	width: 100%;
 }
 
-.centre-text {
-	text-align: center;
-}
-
 table {
 	border-collapse: collapse;
 	margin: 5px auto;
 }
 
 td {
-  border: 1px solid rgb(190,190,190);
-  padding: 10px 20px;
+	border: 1px solid rgb(190, 190, 190);
+	padding: 10px 20px;
 }
+
+form {
+	text-align: center;
+}
+
+/* Target by Class */
+
+.centre-text {
+	text-align: center;
+}
+
+/* Target by Id */
 
 #table {
 	padding-left: 1vw;
@@ -40,11 +50,7 @@ td {
 }
 
 #dam {
-    display: block;
-    margin: 1rem auto;
-    width: 70%;
-}
-
-form {
-	text-align: center;
+	display: block;
+	margin: 1rem auto;
+	width: 70%;
 }
