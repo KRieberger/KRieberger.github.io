@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Table Example</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="./table.css" />
+    </head>
+
+    <body>
+        <table style="border-collapse: collapse;">
+            <caption><i>Table 1:</i>&nbsp;This is the table caption.</caption>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>Gee, this column has a long name</th>
+                    <th><u>Col 2</u></th>
+                    <th>Col 3</th>
+                    <th>Col 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1</th>
+                    <td>data</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <th>Row 2</th>
+                    <td></td>
+                    <td>data</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><mark>Row<br />with<br />tall<br />name</mark></th>
+                    <td></td>
+                    <td></td>
+                    <td>data</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Row 4</th>
+                    <td colspan="4">data</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>
