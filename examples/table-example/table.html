@@ -6,44 +6,43 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="./table.css" />
+
     </head>
 
     <body>
-        <table style="border-collapse: collapse;">
+        <table>
             <caption><i>Table 1:</i>&nbsp;This is the table caption.</caption>
             <thead>
                 <tr>
                     <td></td>
-                    <th>Gee, this column has a long name</th>
-                    <th><u>Col 2</u></th>
-                    <th>Col 3</th>
-                    <th>Col 4</th>
+                    <th>Column 0</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <th>Row 0</th>
+                    <td>(0,0)</td>
+                    <td>(0,1)</td>
+                    <td rowspan="2" colspan="2">(0,2) (0,3)<br />(1,2) (1,3)</td>
+                </tr>
+                <tr>
                     <th>Row 1</th>
-                    <td>data</td>
-                    <td></td>
-                    <td></td>
-                    <td rowspan="2"></td>
+                    <td>(1,0)</td>
+                    <td>(1,1)</td>
                 </tr>
                 <tr>
                     <th>Row 2</th>
-                    <td></td>
-                    <td>data</td>
-                    <td></td>
+                    <td>(2,0)</td>
+                    <td>(2,1)</td>
+                    <td>(2,2)</td>
+                    <td>(2,3)</td>
                 </tr>
                 <tr>
-                    <th><mark>Row<br />with<br />tall<br />name</mark></th>
-                    <td></td>
-                    <td></td>
-                    <td>data</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Row 4</th>
-                    <td colspan="4">data</td>
+                    <th>Row 3</th>
+                    <td colspan="4">(3,0) (3,1) (3,2) (3,3)</td>
                 </tr>
             </tbody>
         </table>
