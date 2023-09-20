@@ -47,7 +47,6 @@
 				<p>Hi there! I'm Kirk, and right now I'm teaching CPRO 1101 at Red Deer Polytechnic.<br />This site
 					serves as an example of a basic HTML/CSS/JavaScript site. Below this text is a few examples of
 					different types of elements. Please take a look and don't be afraid to look at the source code!</p>
-
 			</article>
 
 			<div id="table">
@@ -86,12 +85,23 @@
 		</footer>
 
 		<script>
+			// Submit form when enter is pressed
+			var input = document.getElementById("number");
+			input.addEventListener("keypress", function (event) {
+				if (event.key === "Enter") {
+					event.preventDefault();
+					test();
+				}
+			})
+
 			function test() {
 				var number = document.getElementById("number").value;
-				document.getElementById("table_fill").innerHTML = number;
-				console.log("Updated table 0, 0 to: " + number);
+				if (number != "") {
+					document.getElementById("table_fill").innerHTML = number;
+					console.log("Updated table 0, 0 to: " + number);
+					document.getElementById("number").value = "";
+				}
 			}
-			// alert(string)
 		</script>
 
 		<!-- Load Bootstrap -->
