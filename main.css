@@ -58,6 +58,7 @@ ul {
 
 #dam {
 	border: 0.5rem ridge #000;
+	border-radius: 0.5rem;
 	display: block;
 	margin: 1rem auto;
 	width: 50%;
