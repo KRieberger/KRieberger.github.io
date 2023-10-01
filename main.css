@@ -69,3 +69,8 @@ ul {
 	width: 10%;
 	margin: 0.25rem;
 }
+
+#table-update-alert {
+	display: none;
+	margin-top: 1rem;
+}
