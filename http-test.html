@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>HTTP-Test | Kirk Rieberger</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <style>
+            input,
+            label,
+            button {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="email-form">
+
+            <label for="message">Subject:</label>
+            <input id="message" type="text" placeholder="message..." />
+            <button type="button" onclick="alertFunc()">Submit</button>
+
+        </form>
+
+        <script>
+            function alertFunc() {
+                text = document.getElementById("message").value;
+
+                if (text == "") {
+                    alert("Please don't leave the form empty")
+                } else {
+                    document.getElementById("message").value = "";
+                    alert("You said: " + text)
+                }
+            }
+        </script>
+    </body>
+
+</html>
