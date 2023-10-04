@@ -1,3 +1,5 @@
+/* Basic Styling */
+
 html {
     font-family: times;
 }
@@ -23,6 +25,8 @@ article {
     margin: 10px;
     background: aqua;
 }
+
+/* Flex Containers */
 
 button {
     flex: 1 auto;
