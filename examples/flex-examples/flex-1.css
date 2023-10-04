@@ -1,17 +1,17 @@
 .wrapper {
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 article {
     background-color: aqua;
     border-radius: 0.25rem;
     margin: 0.5rem;
-    /* flex: 1; */
+    flex: 1;
 }
 
 article:nth-of-type(3) {
-    /* flex: 2; */
+    flex: 2;
 }
 
 h1 {
