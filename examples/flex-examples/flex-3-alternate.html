@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Flex Example #3 - With Classes | Kirk Rieberger</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="./flex-3-alternate.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Lorem Ipsum</h1>
+        </header>
+
+        <main class="flex-container">
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar tellus id euismod mollis. Cras
+                    nec tortor nec elit placerat ornare in quis risus. Sed vehicula eu ipsum gravida tempus. Cras tempor nisl
+                    quis orci rutrum congue. Praesent sit amet eros purus. Aliquam posuere nunc dolor, nec pulvinar urna
+                    luctus id. Nullam euismod accumsan tortor. Etiam quis sapien interdum sem tristique malesuada at a erat.
+                    Curabitur rhoncus sed risus in viverra. Donec tincidunt dignissim enim. Aliquam quis quam iaculis,
+                    elementum eros sit amet, porttitor nunc. Maecenas gravida rutrum vehicula. Praesent lobortis rhoncus sem,
+                    quis viverra diam consequat non. Morbi feugiat pulvinar metus sed mollis. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos. Nam mollis luctus auctor. </p>
+
+
+            </article>
+
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar tellus id euismod mollis. Cras
+                    nec tortor nec elit placerat ornare in quis risus. Sed vehicula eu ipsum gravida tempus. Cras tempor nisl
+                    quis orci rutrum congue. Praesent sit amet eros purus. Aliquam posuere nunc dolor, nec pulvinar urna
+                    luctus id. Nullam euismod accumsan tortor. Etiam quis sapien interdum sem tristique malesuada at a erat.
+                    Curabitur rhoncus sed risus in viverra. Donec tincidunt dignissim enim. Aliquam quis quam iaculis,
+                    elementum eros sit amet, porttitor nunc. Maecenas gravida rutrum vehicula. Praesent lobortis rhoncus sem,
+                    quis viverra diam consequat non. Morbi feugiat pulvinar metus sed mollis. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos. Nam mollis luctus auctor. </p>
+
+
+            </article>
+
+            <article class="flex-container flex-article">
+                <div class="flex-container flex-div">
+                    <button onclick="google()">Button 1</button>
+                    <button>Button 2</button>
+                    <button>Button 3</button>
+                    <button>Button 4</button>
+                    <button>Button 5</button>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar tellus id euismod mollis.
+                        Cras
+                        nec tortor nec elit placerat ornare in quis risus. Sed vehicula eu ipsum gravida tempus. Cras tempor
+                        nisl
+                        quis orci rutrum congue. Praesent sit amet eros purus. Aliquam posuere nunc dolor, nec pulvinar urna
+                        luctus id. Nullam euismod accumsan tortor. Etiam quis sapien interdum sem tristique malesuada at a
+                        erat.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Curabitur rhoncus sed risus in viverra. Donec tincidunt dignissim enim. Aliquam quis quam iaculis,
+                        elementum eros sit amet, porttitor nunc. Maecenas gravida rutrum vehicula. Praesent lobortis rhoncus
+                        sem,
+                        quis viverra diam consequat non. Morbi feugiat pulvinar metus sed mollis. Class aptent taciti
+                        sociosqu ad
+                        litora torquent per conubia nostra, per inceptos himenaeos. Nam mollis luctus auctor. </p>
+                </div>
+
+
+            </article>
+        </main>
+
+        <a id="google-link" href="https://www.google.ca/"></a>
+
+        <script>
+            function google() {
+                console.log("Clicked!");
+                document.getElementById("google-link").click();
+            }
+        </script>
+    </body>
+
+</html>

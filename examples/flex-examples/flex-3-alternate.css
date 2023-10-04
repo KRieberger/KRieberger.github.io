@@ -1,0 +1,57 @@
+/* Basic Styling */
+
+html {
+    font-family: times;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: orchid;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+}
+
+/* Flex Containers */
+
+.flex-container {
+	display: flex;
+}
+
+.flex-div {
+	flex: 1 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-article {
+	flex: 3 200px;
+	flex-flow: column;
+}
+
+article {
+	flex: 1 200px;
+}
+
+button {
+    flex: 1 auto;
+    margin: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+}
