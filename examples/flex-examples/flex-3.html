@@ -42,7 +42,7 @@
 
             <article>
                 <div>
-                    <button>Button 1</button>
+                    <button onclick="google()">Button 1</button>
                     <button>Button 2</button>
                     <button>Button 3</button>
                     <button>Button 4</button>
@@ -71,6 +71,15 @@
 
             </article>
         </main>
+
+        <a id="google-link" href="https://www.google.ca/"></a>
+
+        <script>
+            function google() {
+                console.log("Clicked!");
+                document.getElementById("google-link").click();
+            }
+        </script>
     </body>
 
 </html>
