@@ -1,0 +1,23 @@
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    background-color: #bebebe;
+    border: 1px solid grey;
+    border-radius: 0.05rem;
+    margin: 0.1rem;
+    font-size: 24pt;
+}
+
+div:nth-of-type(3) {
+    align-self: flex-end;
+    order: -1;
+}
+
+nav {
+    border: 1px solid #000;
+    height: 250px;
+}
