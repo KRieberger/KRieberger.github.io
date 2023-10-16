@@ -3,7 +3,8 @@
 body {
 	width: 70%;
 	max-width: 900px;
-	margin: 70px auto 0px auto;
+	margin: 63px auto 0px auto;
+	background-color: dimgrey;
 }
 
 nav {
@@ -38,6 +39,26 @@ main {
 
 ul {
 	margin: 0;
+}
+
+main a {
+	text-decoration: underline;
+}
+
+main a:link {
+	color: darkslateblue;
+}
+
+main a:visited {
+	color: darkslategrey;
+}
+
+main a:hover {
+	color: grey;
+}
+
+main a:active {
+	color: gainsboro;
 }
 
 /* Target by Class */
