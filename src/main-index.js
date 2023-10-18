@@ -1,11 +1,10 @@
 // Initialize Toasts
-
 $(document).ready(function () {
     $('.toast').toast({ delay: 2000 })
     $('.toast').toast('hide');
 })
 
-// Submit form when enter is pressed
+// Submit form when enter is pressed - maybe better with JQuery
 var input = document.getElementById("number");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
