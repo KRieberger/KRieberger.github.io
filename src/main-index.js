@@ -15,13 +15,18 @@ input.addEventListener("keypress", function (event) {
 
 function updateTable() {
     var number = document.getElementById("number").value;
-    if (number != "") {
+    if (number.length > 76) {
+        console.log("Input too long");
+        $('#table-length-toast').toast('show');
+        document.getElementById("number").value = "";
+    } else if (number != "") {
         document.getElementById("table_fill").innerHTML = number;
         $('#table-update-toast').toast('show');
         console.log("Updated table 0, 0 to: " + number);
         document.getElementById("number").value = "";
     } else {
         console.log("Invalid input");
+        $('#table-error-toast').toast('show');
         document.getElementById("number").value = "";
     }
 }

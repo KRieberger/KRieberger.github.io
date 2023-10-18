@@ -82,7 +82,7 @@ footer h5 {
 /* Target by Id */
 
 #table {
-	padding-left: 1vw;
+	/* padding-left: 1vw; */
 }
 
 #form {
@@ -110,6 +110,22 @@ footer h5 {
 }
 
 #table-update-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#table-error-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#table-length-toast {
 	text-align: center;
 	margin: 10px;
 	position: absolute;
