@@ -5,6 +5,7 @@ body {
 	max-width: 900px;
 	margin: 63px auto 0px auto;
 	background-color: dimgrey;
+	position: relative;
 }
 
 nav {
@@ -93,9 +94,12 @@ main a:active {
 	margin: 0.25rem;
 }
 
-#table-update-alert {
-	display: none;
-	margin-top: 1rem;
+#table-update-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* Target by PseudoElement */

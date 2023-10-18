@@ -1,3 +1,10 @@
+// Initialize Toasts
+
+$(document).ready(function () {
+    $('.toast').toast({ delay: 2000 })
+    $('.toast').toast('hide');
+})
+
 // Submit form when enter is pressed
 var input = document.getElementById("number");
 input.addEventListener("keypress", function (event) {
@@ -11,11 +18,10 @@ function updateTable() {
     var number = document.getElementById("number").value;
     if (number != "") {
         document.getElementById("table_fill").innerHTML = number;
-        document.getElementById("table-update-alert").style.display = "block";
-        setTimeout(() => {
-            const alert = document.getElementById("table-update-alert");
-            alert.style.display = "none";
-        }, 5000);
+        $('#table-update-toast').toast('show');
+        // setTimeout(() => {
+        //     $('#table-update-toast').toast('hide');
+        // }, 5000);
         console.log("Updated table 0, 0 to: " + number);
         document.getElementById("number").value = "";
     } else {
