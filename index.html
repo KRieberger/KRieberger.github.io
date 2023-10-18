@@ -101,33 +101,7 @@
             <h5><small>Copyright &copy; Kirk Rieberger 2023 - Issued under CC BY-SA License</small></h5>
         </footer>
 
-        <script>
-            // Submit form when enter is pressed
-            var input = document.getElementById("number");
-            input.addEventListener("keypress", function (event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    updateTable();
-                }
-            })
-
-            function updateTable() {
-                var number = document.getElementById("number").value;
-                if (number != "") {
-                    document.getElementById("table_fill").innerHTML = number;
-                    document.getElementById("table-update-alert").style.display = "block";
-                    setTimeout(() => {
-                        const alert = document.getElementById("table-update-alert");
-                        alert.style.display = "none";
-                    }, 5000);
-                    console.log("Updated table 0, 0 to: " + number);
-                    document.getElementById("number").value = "";
-                } else {
-                    console.log("Invalid input");
-                    document.getElementById("number").value = "";
-                }
-            }
-        </script>
+        <script src="./src/main-index.js"></script>
 
         <!-- Load Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
