@@ -4,6 +4,7 @@ body {
 	width: 70%;
 	max-width: 900px;
 	margin: 63px auto 0px auto;
+	padding-bottom: 0;
 	background-color: dimgrey;
 	position: relative;
 }
@@ -42,6 +43,11 @@ ul {
 	margin: 0;
 }
 
+footer {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 main a {
 	text-decoration: underline;
 }
@@ -62,6 +68,11 @@ main a:active {
 	color: gainsboro;
 }
 
+footer h5 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 /* Target by Class */
 
 .centre-text {
@@ -72,6 +83,10 @@ main a:active {
 
 #table {
 	padding-left: 1vw;
+}
+
+#form {
+	margin-top: 5px;
 }
 
 #robit {
