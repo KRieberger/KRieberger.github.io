@@ -18,9 +18,6 @@ function updateTable() {
     if (number != "") {
         document.getElementById("table_fill").innerHTML = number;
         $('#table-update-toast').toast('show');
-        // setTimeout(() => {
-        //     $('#table-update-toast').toast('hide');
-        // }, 5000);
         console.log("Updated table 0, 0 to: " + number);
         document.getElementById("number").value = "";
     } else {
