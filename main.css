@@ -3,7 +3,10 @@
 body {
 	width: 70%;
 	max-width: 900px;
-	margin: 70px auto 0px auto;
+	margin: 63px auto 0px auto;
+	padding-bottom: 0;
+	background-color: dimgrey;
+	position: relative;
 }
 
 nav {
@@ -40,6 +43,36 @@ ul {
 	margin: 0;
 }
 
+footer {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+main a {
+	text-decoration: underline;
+}
+
+main a:link {
+	color: darkslateblue;
+}
+
+main a:visited {
+	color: darkslategrey;
+}
+
+main a:hover {
+	color: grey;
+}
+
+main a:active {
+	color: gainsboro;
+}
+
+footer h5 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 /* Target by Class */
 
 .centre-text {
@@ -48,19 +81,21 @@ ul {
 
 /* Target by Id */
 
-#table {
-	padding-left: 1vw;
+#form {
+	margin-top: 5px;
 }
 
 #robit {
 	height: 2em;
 }
 
+#image-wrapper {
+	text-align: center;
+}
+
 #dam {
 	border: 0.5rem ridge #000;
 	border-radius: 0.5rem;
-	display: block;
-	margin: 1rem auto;
 	width: 50%;
 }
 
@@ -70,7 +105,32 @@ ul {
 	margin: 0.25rem;
 }
 
-#table-update-alert {
-	display: none;
-	margin-top: 1rem;
+#table-update-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#table-error-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#table-length-toast {
+	text-align: center;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Target by PseudoElement */
+
+::selection {
+	background: #808080;
 }
