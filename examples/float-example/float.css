@@ -7,27 +7,23 @@ body {
 
 .box {
     width: 150px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: rgb(207, 232, 220);
-    padding: 1em;
 
     /* Add in example */
-    /* float: left;
-    margin: 15px; */
+    float: left;
+    margin: 15px;
 }
 
-/* .special {
+.special {
     background-color: rgb(148, 255, 172);
     padding: 10px;
-} */
+}
 
-/* .wrapper {
+.wrapper {
     background-color: rgb(148, 255, 172);
     padding: 10px;
     display: flow-root;
-} */
+} 
 
-/* .clear {
+.clear {
     clear: left;
-} */
+} 
