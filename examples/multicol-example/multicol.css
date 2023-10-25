@@ -6,8 +6,10 @@ body {
 
 .container {
     column-width: 250px;
+    column-rule: 2px dotted grey;
 }
 
 h2 {
     column-span: all;
+    background: green;
 }

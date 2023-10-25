@@ -13,5 +13,6 @@ body {
     border: 2px solid rgb(79, 185, 227);
     padding: 10px;
     margin: 0 0 1em 0;
-    /* break-inside: avoid; */
+    /* Avoid breaking inside an element */
+    break-inside: avoid;
 }
