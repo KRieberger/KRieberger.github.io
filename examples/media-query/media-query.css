@@ -40,3 +40,9 @@ aside>* {
 main .ad {
     display: none;
 }
+
+@media (width <= 980px) {
+    aside {
+        display: none;
+    }
+}
