@@ -16,6 +16,17 @@
                 margin: 2rem auto;
                 padding: 0.5rem;
             }
+
+            div {
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                margin: auto;
+                text-align: center;
+                font-size: xx-large;
+            }
         </style>
     </head>
 
@@ -30,9 +41,58 @@
             evaluates to true if at least one of its operands is true. The logical NOT (!) operator negates the truthiness of
             an expression, turning true into false and vice versa. The nullish coalescing (??) operator is used to provide a
             default value when dealing with potentially null or undefined variables.</p>
+        <div>
+            <button onclick="calculator.read()">Calculator</button>
+        </div>
 
         <script>
-            // Put your code here!
+            let calculator = {
+                op: null,
+                a: null,
+                b: null,
+                read() {
+                    this.a = Number(prompt("a:", "null"));
+                    this.op = prompt("Operation to be performed:", "null")
+                    this.b = Number(prompt("b:", "null"));
+
+                    switch (this.op) {
+                        case "sum":
+                            this.sum();
+                            break;
+                        case "mul":
+                            this.mul();
+                            break;
+                        case "sub":
+                            this.sub();
+                            break;
+                        case "div":
+                            this.div();
+                            break;
+                        case "exp":
+                            this.exp();
+                            break;
+                        default:
+                            alert("Invalid Operation!");
+                            break;
+                    }
+                },
+                mul() {
+                    alert(this.a * this.b);
+                },
+                sum() {
+                    alert(this.a + this.b);
+                },
+                div() {
+                    alert(this.a / this.b);
+                },
+                sub() {
+                    alert(this.a - this.b);
+                },
+                exp() {
+                    alert(this.a ** this.b);
+                },
+            };
+
         </script>
     </body>
 
