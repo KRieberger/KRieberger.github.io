@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Nov. 20 Participation</title>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            body {
+                width: 80%;
+                max-width: 900px;
+                margin: 1rem auto;
+                padding: 0.25rem;
+                border: 1px solid black;
+            }
+
+            header {
+                display: flex;
+                justify-content: center;
+            }
+
+            h1,
+            #display {
+                margin: 0;
+            }
+
+            h3 {
+                margin: 0.25rem 0 0 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>November 20<sup>th</sup> Participation - Solution</h1>
+        </header>
+
+        <main>
+            <hr />
+            <h3>You entered:</h3>
+            <p id="display">Nothing yet!</p>
+            <br />
+
+            <form>
+                <label for="userIn">Input:</label>
+                <input type="text" id="userIn" placeholder="Enter text...">
+                <input type="button" id="submit" value="Submit" onclick="userSubmit()">
+                <input type="button" id="clear" value="Clear History" onclick="userClear()">
+            </form>
+
+            <br />
+
+            <h3>Input History:</h3>
+            <ol id="histList">
+
+            </ol>
+        </main>
+
+        <footer>
+            <hr />
+            &copy; Red Deer Polytechnic | CC BY-SA-NC
+        </footer>
+
+        <script>
+            // Track number of inputs so initial value is not added to history.
+
+            let numInputs = 0;
+            // Submit form when enter is pressed - maybe better with JQuery
+            var input = document.getElementById("userIn");
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    userSubmit();
+                }
+            })
+
+            function userSubmit() {
+
+                let userInput = $("#userIn").val();
+                let lastInput = $("#display").text();
+
+                if (userInput != "") {
+                    $("#display").text(userInput);
+                    if (numInputs != 0) {
+                        $("#histList").append($("<li></li>").text(lastInput));
+                    }
+                    numInputs++;
+                }
+
+                $("#userIn").val(""); // Clears input field upon clicking "Submit".
+            }
+
+            function userClear() {
+                $("#histList").empty();
+            }
+        </script>
+
+</html>
