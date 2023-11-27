@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <title>Nov. 20 Participation</title>
+        <title>Nov. 27 Participation</title>
         <!-- jQuery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Add jQuery here -->
         <style>
             body {
                 width: 80%;
@@ -35,7 +35,7 @@
     <body>
 
         <header>
-            <h1>November 20<sup>th</sup> Participation - Solution</h1>
+            <h1>November 27<sup>th</sup> Participation - Solution</h1>
         </header>
 
         <main>
@@ -69,7 +69,7 @@
             let numInputs = 0;
 
             // Submit form when enter is pressed
-            $('#userIn').keypress(function (event) {
+            document.getElementById("userIn").addEventListener("keypress", function (event) { // Update this
                 if (event.key === "Enter") {
                     event.preventDefault();
                     userSubmit();
@@ -77,23 +77,24 @@
             });
 
             function userSubmit() {
-
-                let userInput = $("#userIn").val();
-                let lastInput = $("#display").text();
+                let userInput = document.getElementById("userIn").value; // Update this
+                let lastInput = document.getElementById("display").innerText; // Update this
 
                 if (userInput != "") {
-                    $("#display").text(userInput);
+                    document.getElementById("display").innerText = userInput; // Update this
                     if (numInputs != 0) {
-                        $("#histList").append($("<li></li>").text(lastInput));
+                        let newHist = document.createElement("li");          // Update this  ║
+                        newHist.innerText = lastInput;                       // Update this  ╠ These 3 lines can be condensed into one with jQuery
+                        document.getElementById("histList").append(newHist); // Update this  ║
                     }
                     numInputs++;
                 }
 
-                $("#userIn").val(""); // Clears input field upon clicking "Submit".
+                document.getElementById("userIn").value = ""; // Clears input field upon clicking "Submit". Update this
             }
 
             function userClear() {
-                $("#histList").empty();
+                document.getElementById("histList").innerHTML = ""; // Update this
             }
         </script>
 
