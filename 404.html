@@ -3,11 +3,73 @@
 
     <head>
         <title>Page Not Found | Kirk Rieberger</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
     </head>
 
     <body>
         <h1>Oops!</h1>
         <p>That page wasn't found on this domain. <br /> Go home <a href="index.html">here</a>.</p>
+
+        <div class="container">
+            <div class="div text-center">
+                <h2>Ducks</h2>
+                <p class="lead">Second row</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="div col-lg-4">
+                    <form action="" id="form" class="needs-validation" novalidate>
+                        <fieldset>
+                            <div>
+                                <label for="huey" class="form-check-label">Huey</label>
+                                <input type="radio" id="huey" value="huey" name="ducks" class="form-check-input" required>
+                            </div>
+                            <div>
+                                <label for="dewey" class="form-check-label">Dewey</label>
+                                <input type="radio" id="dewey" value="dewey" name="ducks" class="form-check-input" required>
+                            </div>
+                            <div>
+                                <label for="louie" class="form-check-label">Louie</label>
+                                <input type="radio" id="louie" value="louie" name="ducks" class="form-check-input" required>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Select a duck.
+                            </div>
+
+                            <br />
+
+                            <label for="text" class="form-label">Test Input:</label>
+                            <input type="text" placeholder="Text..." name="text" class="form-control" required />
+
+                            <br />
+
+                            <label for="email" class="form-label">Enter Your Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Username" id="email" required>
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" placeholder="Domain" required>
+                            </div>
+
+                            <br />
+
+                            <input type="submit" onclick="clicked()" value="Go" class="btn btn-primary" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+        <script>
+            function clicked() {
+                let test = $("#form").serializeArray();
+            }
+        </script>
     </body>
 
 </html>

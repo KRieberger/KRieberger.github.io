@@ -14,7 +14,7 @@ input.addEventListener("keypress", function (event) {
 })
 
 function updateTable() {
-    var number = document.getElementById("number").value;
+    var number = $("#number").val();
     if (number.length > 76) {
         console.log("Input too long");
         $('#table-length-toast').toast('show');
