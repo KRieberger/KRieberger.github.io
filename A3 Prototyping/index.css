@@ -1,0 +1,29 @@
+main {
+    width: 80%;
+    max-width: 900px;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+
+article:before {
+    display: block;
+    content: "";
+    height: 65px;
+    margin: -65px 0 0;
+}
+
+#top-nav {
+    padding-bottom: 10px;
+    display: block;
+}
+
+#sidebar {
+    height: 100%;
+    width: 15%;
+    margin-top: 55px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border: 1px solid #000;
+}
