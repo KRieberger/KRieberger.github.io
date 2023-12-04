@@ -108,23 +108,23 @@ footer h5 {
 #table-update-toast {
 	text-align: center;
 	margin: 10px;
-	position: absolute;
-	top: 0;
+	position: fixed;
+	top: 60px;
 	right: 0;
 }
 
 #table-error-toast {
 	text-align: center;
 	margin: 10px;
-	position: absolute;
-	top: 0;
+	position: fixed;
+	top: 60px;
 	right: 0;
 }
 
 #table-length-toast {
 	text-align: center;
 	margin: 10px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 }
