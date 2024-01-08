@@ -79,6 +79,10 @@ footer h5 {
 	text-align: center;
 }
 
+.hidden {
+	display: none;
+}
+
 /* Target by Id */
 
 #form {
