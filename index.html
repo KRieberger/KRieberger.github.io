@@ -43,26 +43,55 @@
             </div> <!-- /navbar-collapse -->
         </nav>
 
-        <main>
-            <article>
-                <h2>Home</h2>
-                <hr />
-                <p>
-                    Hello there! I'm Kirk, and right now I'm teaching CPRO 1101 at Red Deer Polytechnic.
-                </p>
-                <p>
-                    This site serves as an example of a basic HTML/CSS/JavaScript site. Below this text is a few examples of
-                    different types of elements. Please take a look and don't be afraid to look at the source code!
-                </p>
-                <p>
-                    This page is displayed using the <i>normal flow</i> layout technique. That means each HTML element is
-                    laid out one element after another in a single column. By default, each block element takes up the whole
-                    width of its parent element.
-                </p>
-                <p>
-                    This page may undergo regular updates.
-                </p>
+        <main class="container" style="margin-top: 75px;">
+            <article class="row border">
+                <div class="col-lg-12">
+                    <h2>Home</h2>
+                    <hr />
+                    <p>
+                        Hello there! I'm Kirk, and right now I'm teaching CPRO 1101 at Red Deer Polytechnic.
+                    </p>
+                    <p>
+                        This site serves as an example of a basic HTML/CSS/JavaScript site. Below this text is a few examples
+                        of different types of elements. Please take a look and don't be afraid to look at the source code!
+                    </p>
+                    <p>
+                        This page is displayed using the <i>normal flow</i> layout technique. That means each HTML element is
+                        laid out one element after another in a single column. By default, each block element takes up the
+                        whole width of its parent element.
+                    </p>
+                    <p>
+                        This page may undergo regular updates.
+                    </p>
+                </div>
             </article>
+            <section class="row">
+                <div class="col-lg-3 border text-align-center">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>(0, 0)</th>
+                                <th>(1, 0)</th>
+                                <th>(2, 0)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>(1, 0)</th>
+                                <td>(1, 1)</td>
+                                <td>(1, 2)</td>
+                            </tr>
+                            <tr>
+                                <th>(3, 0)</th>
+                                <td>(3, 1)</td>
+                                <td>(3, 2)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-6 border">Image</div>
+                <div class="col-lg-3 border">Form</div>
+            </section>
         </main>
     </body>
 
