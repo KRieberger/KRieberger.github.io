@@ -6,6 +6,13 @@ table {
     border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #000;
+}
+
+@media screen and (max-width: 576px) {
+    #page-top {
+        margin-top: 50px;
+    }
 }
