@@ -72,13 +72,19 @@
             <section class="row p-1">
                 <div class="col-lg-3 p-1 border">
                     <h5 class="text-center">Members of Pink Floyd</h5>
-                    <table class="table table-striped caption-top">
+                    <table id="FloydTable" class="table table-striped caption-top">
                         <!-- <caption>Members of Pink Floyd</caption> -->
                         <thead>
                             <tr>
-                                <th scope="column">First Name</th>
-                                <th scope="column">Last Name</th>
-                                <th scope="column">Main Instrument</th>
+                                <th scope="column" class="clickable" onclick="sortTable(0)">
+                                    First Name<span class="sort-arrow">&#x21D5;</span>
+                                </th>
+                                <th scope="column" class="clickable" onclick="sortTable(1)">
+                                    Last Name<span class="sort-arrow">&#x21D5;</span>
+                                </th>
+                                <th scope="column" class="clickable" onclick="sortTable(2)">
+                                    Main Instrument<span class="sort-arrow">&#x21D5;</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider">
