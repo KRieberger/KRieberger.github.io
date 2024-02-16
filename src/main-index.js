@@ -5,6 +5,7 @@ $(document).ready(function () {
 })
 
 // Submit form when enter is pressed - maybe better with JQuery
+/*
 var input = document.getElementById("number");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -12,6 +13,7 @@ input.addEventListener("keypress", function (event) {
         updateTable();
     }
 })
+*/
 
 function updateTable() {
     var number = $("#number").val();
@@ -28,5 +30,55 @@ function updateTable() {
         console.log("Invalid input");
         $('#table-error-toast').toast('show');
         document.getElementById("number").value = "";
+    }
+}
+
+// Adapted from: https://www.w3schools.com/howto/howto_js_sort_table.asp
+// Note: this is an implementation of the "Bubble Sort" algorithm
+function sortTable(n) {
+    let table, rows, switching, i, x, y, shouldSwitch, dir;
+    let switchCount = 0;
+    table = $("#FloydTable");
+    switching = true;
+
+    dir = "ascending"
+
+    while (switching) {
+        switching = false;
+        rows = table['0'].rows;
+
+        neighbourCheck: for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("td")[n];
+            y = rows[i + 1].getElementsByTagName("td")[n];
+
+            switch (dir) {
+                case ("ascending"):
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break neighbourCheck;
+                    }
+                    break;
+                case ("descending"):
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break neighbourCheck;
+                    }
+                    break;
+            }
+        }
+        switch (shouldSwitch) {
+            case (true):
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+                switching = true;
+                switchCount++;
+                break;
+            case (false):
+                if (switchCount == 0 && dir == "ascending") {
+                    dir = "descending";
+                    switching = true;
+                }
+                break;
+        }
     }
 }
