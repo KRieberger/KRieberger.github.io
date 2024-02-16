@@ -8,6 +8,11 @@
     border-radius: 10px;
 }
 
+.sort-arrow {
+    float: right;
+    font-weight: normal;
+}
+
 @media screen and (max-width: 576px) {
     #page-top {
         margin-top: 58px;
