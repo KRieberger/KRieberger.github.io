@@ -5,7 +5,7 @@ $(document).ready(function () {
 })
 
 // Submit form when enter is pressed - maybe better with JQuery
-/*
+
 var input = document.getElementById("number");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -13,7 +13,7 @@ input.addEventListener("keypress", function (event) {
         updateTable();
     }
 })
-*/
+
 
 function updateTable() {
     var number = $("#number").val();
@@ -33,15 +33,78 @@ function updateTable() {
     }
 }
 
+function headingClick(n) {
+    // 0 -> First Name
+    // 1 -> Last Name
+    // 2 -> Instrument
+    let state;
+    switch (n) {
+        case (0):
+            state = $("#table-sort-0").text();
+            if (state == "⇕") {
+                $("#table-sort-0").text("⇑");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇕");
+                sortTable(0, "ascending");
+            } else if (state == "⇑") {
+                $("#table-sort-0").text("⇓");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇕");
+                sortTable(0, "descending");
+            } else {
+                $("#table-sort-0").text("⇑");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇕");
+                sortTable(0, "ascending");
+            }
+            break;
+        case (1):
+            state = $("#table-sort-1").text();
+            if (state == "⇕") {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇑");
+                $("#table-sort-2").text("⇕");
+                sortTable(1, "ascending");
+            } else if (state == "⇑") {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇓");
+                $("#table-sort-2").text("⇕");
+                sortTable(1, "descending");
+            } else {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇑");
+                $("#table-sort-2").text("⇕");
+                sortTable(1, "ascending");
+            }
+            break;
+        case (2):
+            state = $("#table-sort-2").text();
+            if (state == "⇕") {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇑");
+                sortTable(2, "ascending");
+            } else if (state == "⇑") {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇓");
+                sortTable(2, "descending");
+            } else {
+                $("#table-sort-0").text("⇕");
+                $("#table-sort-1").text("⇕");
+                $("#table-sort-2").text("⇑");
+                sortTable(2, "ascending");
+            }
+            break;
+    }
+}
+
 // Adapted from: https://www.w3schools.com/howto/howto_js_sort_table.asp
 // Note: this is an implementation of the "Bubble Sort" algorithm
-function sortTable(n) {
-    let table, rows, switching, i, x, y, shouldSwitch, dir;
-    let switchCount = 0;
+function sortTable(n, dir) {
+    let table, rows, switching, i, x, y, shouldSwitch;
     table = $("#FloydTable");
     switching = true;
-
-    dir = "ascending"
 
     while (switching) {
         switching = false;
@@ -67,18 +130,9 @@ function sortTable(n) {
                     break;
             }
         }
-        switch (shouldSwitch) {
-            case (true):
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
-                switching = true;
-                switchCount++;
-                break;
-            case (false):
-                if (switchCount == 0 && dir == "ascending") {
-                    dir = "descending";
-                    switching = true;
-                }
-                break;
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+            switching = true;
         }
     }
 }
