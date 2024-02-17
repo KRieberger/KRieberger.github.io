@@ -13,6 +13,12 @@
     font-weight: normal;
 }
 
+.toast {
+    position: fixed;
+    top: 6.375em;
+    right: 2em;
+}
+
 @media screen and (max-width: 576px) {
     #page-top {
         margin-top: 58px;
