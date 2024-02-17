@@ -5,16 +5,31 @@ $(document).ready(function () {
 })
 
 // Submit form when enter is pressed - maybe better with JQuery
-
-var input = document.getElementById("number");
+/*
+var input = $("#message");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         updateTable();
     }
 })
+*/
+function submitForm() {
+    const successModal = $("#form-modal-success");
+    let fName = $("#fName").val();
+    let lName = $("#lName").val();
+    let email = $("#username").val() + $("#domain").val();
+    let subject = $("#subject").val();
+    let message = $("#message").val();
 
+    if (fName != "" && lName != "" && email != "" && subject != "" && message != "" ) {
+        successModal.modal('show');
+    } else {
+        $("#form-failure-toast").toast("show");
+    }
+}
 
+/*
 function updateTable() {
     var number = $("#number").val();
     if (number.length > 76) {
@@ -32,6 +47,7 @@ function updateTable() {
         document.getElementById("number").value = "";
     }
 }
+*/
 
 function headingClick(n) {
     // 0 -> First Name
