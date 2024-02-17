@@ -8,6 +8,7 @@ body {
 .img {
     width: 150px;
 
+    float: right;
     /* Add in example */
     /* float: left;
     margin: 15px; */
@@ -21,9 +22,9 @@ body {
 .wrapper {
     background-color: rgb(148, 255, 172);
     padding: 10px;
-    /* display: flow-root; */
+    display: flow-root;
 } 
 
 .clear {
-    /* clear: left; */
+    clear: right;
 } 
