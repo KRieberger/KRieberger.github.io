@@ -41,18 +41,8 @@ main .ad {
     display: none;
 }
 
-/* Solution
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
     aside {
         display: none;
     }
-
-    main .ad {
-        display: flex;
-    }
-
-    body {
-        margin: auto;
-    }
 }
-*/
