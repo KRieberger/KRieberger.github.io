@@ -4,26 +4,16 @@ $(document).ready(function () {
     $('.toast').toast('hide');
 })
 
-// Submit form when enter is pressed - maybe better with JQuery
-/*
-var input = $("#message");
-input.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        updateTable();
-    }
-})
-*/
 function submitForm() {
-    const successModal = $("#form-modal-success");
+    // Probably a neater way to do this
     let fName = $("#fName").val();
     let lName = $("#lName").val();
-    let email = $("#username").val() + $("#domain").val();
+    let email = $("#username").val() + "@" + $("#domain").val();
     let subject = $("#subject").val();
     let message = $("#message").val();
 
-    if (fName != "" && lName != "" && email != "" && subject != "" && message != "" ) {
-        successModal.modal('show');
+    if (fName != "" && lName != "" && email != "@" && subject != "" && message != "" ) {
+        $("#form-modal-success").modal('show');
     } else {
         $("#form-failure-toast").toast("show");
     }
